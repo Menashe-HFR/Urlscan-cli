@@ -1,0 +1,392 @@
+{
+  "name": "Atlas launch audit",
+  "urls": [
+    "https://atlas.test/",
+    "https://docs.atlas.test/",
+    "https://signin-atlas.test/login",
+    "https://cdn.assets.test/",
+    "http://legacy.test/",
+    "https://offline.test/"
+  ],
+  "results": {
+    "atlas.test": {
+      "source": "synthetic",
+      "verdict": "no_flags",
+      "score": -12,
+      "http_status": 200,
+      "ip": "192.0.2.20",
+      "country": "DE",
+      "asn": "AS64500 · Documentation network",
+      "title": "Atlas — a place for your ideas",
+      "tls_days": 90,
+      "final_url": "https://atlas.test/",
+      "request_count": 26,
+      "domains": [
+        {
+          "domain": "atlas.test",
+          "requests": 22,
+          "third_party": false
+        },
+        {
+          "domain": "edge-1.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-2.external.test",
+          "requests": 2,
+          "third_party": true
+        }
+      ],
+      "findings": [
+        {
+          "severity": "info",
+          "title": "No flags in this sample",
+          "detail": "The sample verdict contains no malicious indicators. This is not a guarantee of safety."
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://atlas.test/",
+          "type": "Document",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-1.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-2.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        }
+      ],
+      "redirects": [],
+      "scan_id": null,
+      "report_url": null
+    },
+    "docs.atlas.test": {
+      "source": "synthetic",
+      "verdict": "no_flags",
+      "score": -8,
+      "http_status": 200,
+      "ip": "192.0.2.21",
+      "country": "US",
+      "asn": "AS64500 · Documentation network",
+      "title": "Atlas developer docs",
+      "tls_days": 90,
+      "final_url": "https://docs.atlas.test/",
+      "request_count": 18,
+      "domains": [
+        {
+          "domain": "docs.atlas.test",
+          "requests": 16,
+          "third_party": false
+        },
+        {
+          "domain": "edge-1.external.test",
+          "requests": 2,
+          "third_party": true
+        }
+      ],
+      "findings": [
+        {
+          "severity": "info",
+          "title": "No flags in this sample",
+          "detail": "The sample verdict contains no malicious indicators. This is not a guarantee of safety."
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://docs.atlas.test/",
+          "type": "Document",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-1.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        }
+      ],
+      "redirects": [],
+      "scan_id": null,
+      "report_url": null
+    },
+    "signin-atlas.test": {
+      "source": "synthetic",
+      "verdict": "malicious",
+      "score": 94,
+      "http_status": 200,
+      "ip": "192.0.2.22",
+      "country": "NL",
+      "asn": "AS64500 · Documentation network",
+      "title": "Atlas account verification",
+      "tls_days": 90,
+      "final_url": "https://signin-atlas.test/login",
+      "request_count": 42,
+      "domains": [
+        {
+          "domain": "signin-atlas.test",
+          "requests": 32,
+          "third_party": false
+        },
+        {
+          "domain": "edge-1.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-2.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-3.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-4.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-5.external.test",
+          "requests": 2,
+          "third_party": true
+        }
+      ],
+      "findings": [
+        {
+          "severity": "high",
+          "title": "Credential collection pattern",
+          "detail": "Synthetic example: a sign-in page on a lookalike domain posts to an unrelated host."
+        },
+        {
+          "severity": "high",
+          "title": "Lookalike hostname",
+          "detail": "signin-atlas.test is not a subdomain of atlas.test."
+        },
+        {
+          "severity": "medium",
+          "title": "Cross-domain redirect",
+          "detail": "The sample navigation crosses an unrelated domain before loading the final page."
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://signin-atlas.test/login",
+          "type": "Document",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-1.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-2.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-3.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-4.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-5.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        }
+      ],
+      "redirects": [],
+      "scan_id": null,
+      "report_url": null
+    },
+    "cdn.assets.test": {
+      "source": "synthetic",
+      "verdict": "review",
+      "score": 28,
+      "http_status": 200,
+      "ip": "192.0.2.23",
+      "country": "US",
+      "asn": "AS64500 · Documentation network",
+      "title": "Asset delivery network",
+      "tls_days": 90,
+      "final_url": "https://cdn.assets.test/",
+      "request_count": 38,
+      "domains": [
+        {
+          "domain": "cdn.assets.test",
+          "requests": 30,
+          "third_party": false
+        },
+        {
+          "domain": "edge-1.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-2.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-3.external.test",
+          "requests": 2,
+          "third_party": true
+        },
+        {
+          "domain": "edge-4.external.test",
+          "requests": 2,
+          "third_party": true
+        }
+      ],
+      "findings": [
+        {
+          "severity": "medium",
+          "title": "Third-party request fan-out",
+          "detail": "This illustrative sample contacts four external domains. Review the destinations before trusting the page."
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://cdn.assets.test/",
+          "type": "Document",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-1.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-2.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-3.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-4.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        }
+      ],
+      "redirects": [],
+      "scan_id": null,
+      "report_url": null
+    },
+    "legacy.test": {
+      "source": "synthetic",
+      "verdict": "review",
+      "score": 12,
+      "http_status": 200,
+      "ip": "192.0.2.24",
+      "country": "GB",
+      "asn": "AS64500 · Documentation network",
+      "title": "Legacy portal",
+      "tls_days": 90,
+      "final_url": "https://legacy.test/",
+      "request_count": 12,
+      "domains": [
+        {
+          "domain": "legacy.test",
+          "requests": 10,
+          "third_party": false
+        },
+        {
+          "domain": "edge-1.external.test",
+          "requests": 2,
+          "third_party": true
+        }
+      ],
+      "findings": [
+        {
+          "severity": "medium",
+          "title": "Unencrypted starting URL",
+          "detail": "The submitted URL uses HTTP. The sample shows a redirect to HTTPS."
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "http://legacy.test/",
+          "type": "Document",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://edge-1.external.test/asset.js",
+          "type": "Script",
+          "status": 200
+        }
+      ],
+      "redirects": [
+        "http://legacy.test/",
+        "https://legacy.test/"
+      ],
+      "scan_id": null,
+      "report_url": null
+    },
+    "offline.test": {
+      "source": "synthetic",
+      "verdict": "unknown",
+      "score": null,
+      "http_status": null,
+      "ip": "192.0.2.25",
+      "country": "—",
+      "asn": "AS64500 · Documentation network",
+      "title": "Unavailable host",
+      "tls_days": null,
+      "final_url": "https://offline.test/",
+      "request_count": 0,
+      "domains": [],
+      "findings": [
+        {
+          "severity": "info",
+          "title": "No verdict available",
+          "detail": "A failed scan is unknown, never a clean result."
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://offline.test/",
+          "type": "Document",
+          "status": null
+        }
+      ],
+      "redirects": [],
+      "scan_id": null,
+      "report_url": null
+    }
+  },
+  "description": "Fictional .test domains and documentation-only IPs. No sites are contacted."
+}
